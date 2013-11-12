@@ -6,9 +6,9 @@ require 'matrc/version'
 Gem::Specification.new do |spec|
   spec.name          = "matrc"
   spec.version       = Matrc::VERSION
-  spec.authors       = ["Raquel Alvarez"]
-  spec.email         = ["TODO: Write your email address"]
-  spec.description   = %q{TODO: Write a gem description}
+  spec.authors       = ["Raquel Alvarez - Carlota Lázaro"]
+  spec.email         = ["alu0100700435@ull.edu.es - alu0100698862@ull.edu.es"]
+  spec.description   = %q{ Gema que usará la funcion de una matriz para la representacion de matrices densas y dispersas }
   spec.summary       = %q{TODO: Write a gem summary}
   spec.homepage      = ""
   spec.license       = "MIT"
