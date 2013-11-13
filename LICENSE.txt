@@ -1,4 +1,4 @@
-Copyright (c) 2013 Raquel Alvarez
+Copyright (c) 2013 Raquel Alvarez, Carlota Lázaro
 
 MIT License
 
