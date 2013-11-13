@@ -1,29 +1,38 @@
 # Matrc
 
-TODO: Write a gem description
+Uso de Clases que permiten resolver problemas con matrices densas y matrices dispersas.
 
-## Installation
 
-Add this line to your application's Gemfile:
+## Instalación
+
+Añadir esta línea al Gemfile de tu aplicación.
 
     gem 'matrc'
 
-And then execute:
+Y luego ejecutar:
 
     $ bundle
 
-Or install it yourself as:
+O instalar por su cuenta mediante el siguiente comando:
 
     $ gem install matrc
 
-## Usage
+## Uso
 
-TODO: Write usage instructions here
 
-## Contributing
+Para poder hacer un uso correcto de esta librería en tu código de Ruby, se tendrá que incluir el siguiente fichero:
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+require "Practica9"
+
+Para la colaboracion en la escritura del código hay que instalar las dependencias de la librería ejecutando el comando:
+
+bundle
+
+
+## Contribuir
+
+1. Haz un fork
+2. Crea tu rama de características (`git checkout -b my-new-feature`)
+3. Haz un commit de tus cambios (`git commit -am 'Add some feature'`)
+4. Haz un push a la rama (`git push origin my-new-feature`)
+5. Crea un Pull Request
