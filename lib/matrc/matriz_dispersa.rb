@@ -1,0 +1,4 @@
+
+class MatrizDispersa < Matriz
+  
+end
