@@ -16,7 +16,7 @@ describe Matrc::MatrizDensa do
    end
 end
 
-describe "Matrices de enteros" do
+describe "#Matrices de enteros" do
    before :all do
 
     @m1 = MatEntero.new(2,2)
@@ -51,10 +51,18 @@ end
       @m3[1,0] = -1
       @m3[1,1] = -1
     end
+    
+    it "Maximo de una matriz" do
+       @m1.max.should == 4
+    end
+    it "Minimo de una matriz" do
+       @m2.min.should == 2
+    end
+
 
 end
 
-describe "Matrices con fracciones" do
+describe "#Matrices con fracciones" do
    before :all do
 
     @m1 = MatFraction.new(2,2)
@@ -81,11 +89,13 @@ describe "Matrices con fracciones" do
     @m3[1,1] = Matrc::Fraction.new(1, 8)
 
     end
-end
-
-
-
-	
+    it "Maximo de una matriz de fracciones" do
+       @m1.max.should == 0.25
+    end
+    it "Minimo de una matriz de fracciones" do
+       @m1.min.should == 0.25
+    end
+   end	
 
 end
 

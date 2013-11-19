@@ -16,13 +16,12 @@ class Fraction
     end
   end
   
-  def to_s()
+  def to_string()
     "#{@num}/#{@den}"
   end
  
-   def to_f()
-     flotante =@num.to_f/@den.to_f
-     flotante
+   def to_float()
+     (@num.to_f/@den.to_f)    
    end
   
    def +(other)
@@ -79,7 +78,7 @@ class Fraction
     if !(other.is_a? Fraction)
 		other = Fraction.new(other,1)
 	end
-     to_float() <=> other.to_float()
+     self.to_float() <=> other.to_float()
    end
    
    def coerce(other)
