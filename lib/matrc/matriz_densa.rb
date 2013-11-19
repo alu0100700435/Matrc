@@ -1,9 +1,12 @@
+require "matrc/matriz.rb"
+
+module Matrc
 
 class MatrizDensa < Matriz
 
   def initialize(row,col)
     super(row,col)
-    @mtdensa = Array.new(row){Array.new(col, 0}
+    @mtdensa = Array.new(row){Array.new(col, zero)}
   end
   
   def [](row,col)
@@ -14,16 +17,5 @@ class MatrizDensa < Matriz
     @mtdensa[row][col] = val
   end
 
-  def ==(other)
-    for i in 0...@row
-      for j in 0...@col
-        if(@mtdensa[i][j] == other[i}[j])
-	  return true
-	else
-          return false
-        end
-       end
-     end
-  end
-
+end
 end

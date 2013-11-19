@@ -1,11 +1,11 @@
-require "gcd.rb"
-
-include Comparable
+module Matrc
 
 class Fraction
   
   attr_accessor :num, :den
-  
+
+  include Comparable
+
   def initialize(num, den)
     
     com = gcd(num, den)
@@ -85,5 +85,16 @@ class Fraction
    def coerce(other)
         [self, other]
     end
+
+
+def gcd(u, v)
+  u, v = u.abs, v.abs
+  while v != 0
+    u, v = v, u % v
+  end
+  u
+end
         
+end
+
 end

@@ -1,10 +1,12 @@
 require "matrc/version"
 
+   require "matrc/matriz.rb"
+   require "matrc/matriz_densa.rb"
+   require "matrc/matriz_dispersa.rb"
+   require "matrc/fraction.rb"
+
 module Matrc
   
-   require "mtrc/matriz.rb"
-   require "mtrc/matriz_densa.rb"
-   require "mtrc/matriz_dispersa.rb"
-   require "mtrc/fraction.rb"
-require "mtrc/gcd.rb"
+
+
 end

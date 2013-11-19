@@ -32,16 +32,16 @@ class TestMatrizDensa < Test::Unit::TestCase
     @m2[1, 0] = 4
     @m2[1, 1] = 5
  
+
+    
+  end
+
+   def test_simple
     @m3[0, 0] = 3
     @m3[0, 1] = 5
     @m3[1, 0] = 7
     @m3[1, 1] = 9
 		
-    
-  end
-
-   def test_simple
-
      assert_equal(@m3, @m1+@m2)
  
    end 
