@@ -71,6 +71,29 @@ end
       end
 	end
   end
+
+  def max
+     max = -9999
+     for i in 0...@row
+       for j in 0...@col
+         if(self[i, j] > max)
+            max = self[i][j]
+         end
+        end
+      end
+  max
+ end
   
+  def min
+     min = 9999
+     for i in 0...@row
+       for j in 0...@col
+         if(self[i, j] < min)
+            min = self[i][j]
+         end
+        end
+      end
+  min
+ end
   
 end

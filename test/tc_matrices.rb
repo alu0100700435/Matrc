@@ -1,4 +1,4 @@
-require "lib/matrc"
+require "lib/matrc.rb"
 require "test/unit"
 
 class MatEntero < Matrc::MatrizDensa
@@ -40,8 +40,7 @@ class TestMatrizDensa < Test::Unit::TestCase
     @m3[0, 0] = 3
     @m3[0, 1] = 5
     @m3[1, 0] = 7
-    @m3[1, 1] = 9
-		
+    @m3[1, 1] = 9		
      assert_equal(@m3, @m1+@m2)
  
    end 
