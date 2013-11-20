@@ -43,9 +43,6 @@ class TestMatrizDensa < Test::Unit::TestCase
     @mf2[0, 1] = Matrc::Fraction.new(1, 4)
     @mf2[1, 0] = Matrc::Fraction.new(1, 4)
     @mf2[1, 1] = Matrc::Fraction.new(1, 4)
-    
-
-    
   end
 
    def test_simple
@@ -78,6 +75,15 @@ class TestMatrizDensa < Test::Unit::TestCase
     @mf3[1, 0] = Matrc::Fraction.new(1, 8)
     @mf3[1, 1] = Matrc::Fraction.new(1, 8)
     assert_equal(@mf3,@mf1*@mf2)
-   end 
+   end
 
+   def test_failure
+		 @mf3[0, 0] = Matrc::Fraction.new(1, 2)
+     @mf3[0, 1] = Matrc::Fraction.new(1, 2)
+     @mf3[1, 0] = Matrc::Fraction.new(1, 2)
+     @mf3[1, 1] = Matrc::Fraction.new(1, 2)
+     assert_not_equal(@mf3,@mf1*@mf2)
+   end
+     
+   
 end
