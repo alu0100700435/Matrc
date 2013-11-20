@@ -7,6 +7,17 @@ class Matriz
   def initialize(row,col)
     @row,@col = row,col
    end
+
+  def to_s
+   aux = ""
+   for i in 0...self.row
+     for j in 0...self.col
+       aux << "#{self[i,j]}"
+     end
+     aux << "\n"
+    end
+    aux
+  end  
    
   def *(other)
     if(self.col == other.row)
@@ -59,10 +70,6 @@ class Matriz
    end
   return true
 end
-
-  def coerce(other)
-    [self, other]
-  end
 
   def each
     for i in 0...self.row

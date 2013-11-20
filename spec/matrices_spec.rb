@@ -70,6 +70,8 @@ describe "#Matrices con fracciones" do
     @mf1 = MatFraction.new(2,2)
     @mf2 = MatFraction.new(2,2)
     @mf3 = MatFraction.new(2,2)
+    @mf4 = MatFraction.new(2,2)
+    @m = MatEntero.new(2,2)
 
     @mf1[0,0] = Matrc::Fraction.new(1, 4)
     @mf1[0,1] = Matrc::Fraction.new(1, 4)
@@ -80,19 +82,41 @@ describe "#Matrices con fracciones" do
     @mf2[0,1] = Matrc::Fraction.new(1, 4)
     @mf2[1,0] = Matrc::Fraction.new(1, 4)
     @mf2[1,1] = Matrc::Fraction.new(1, 4)
+    
+    @m[0,0] = 3
+    @m[0,1] = 3
+    @m[1,0] = 3
+    @m[1,1] = 3
  
     end
 
     it "Multiplicacion de dos matrices" do
-
-    @mf3[0,0] = Matrc::Fraction.new(1, 8)
-    @mf3[0,1] = Matrc::Fraction.new(1, 8)
-    @mf3[1,0] = Matrc::Fraction.new(1, 8)
-    @mf3[1,1] = Matrc::Fraction.new(1, 8)
+      @mf3[0,0] = Matrc::Fraction.new(1, 8)
+      @mf3[0,1] = Matrc::Fraction.new(1, 8)
+      @mf3[1,0] = Matrc::Fraction.new(1, 8)
+      @mf3[1,1] = Matrc::Fraction.new(1, 8)
     
-		(@mf1*@mf2).should == @mf3
-
+      (@mf1*@mf2).should == @mf3
     end
+
+    it "Suma de dos matrices diferentes" do
+      @mf4[0,0] = Matrc::Fraction.new(13, 4)
+      @mf4[0,1] = Matrc::Fraction.new(13, 4)
+      @mf4[1,0] = Matrc::Fraction.new(13, 4)
+      @mf4[1,1] = Matrc::Fraction.new(13, 4)
+    
+      (@m+@mf1).should == @mf4
+    end
+    
+    it "* de dos matrices diferentes" do
+      @mf4[0,0] = Matrc::Fraction.new(3, 2)
+      @mf4[0,1] = Matrc::Fraction.new(3, 2)
+      @mf4[1,0] = Matrc::Fraction.new(3, 2)
+      @mf4[1,1] = Matrc::Fraction.new(3, 2)
+    
+     (@m*@mf1).should == @mf4
+    end
+
     it "Maximo de una matriz de fracciones" do
        @mf1.max.should == 0.25
     end

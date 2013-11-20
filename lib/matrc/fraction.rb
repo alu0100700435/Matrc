@@ -41,7 +41,7 @@ module Matrc
 		def *(other)
 		  if !(other.is_a? Fraction)
 			other = Fraction.new(other,1)
-		end
+		   end
 		   Fraction.new(@num * other.num, @den *other.den)
 		end
 		
@@ -82,7 +82,7 @@ module Matrc
 		 end
 		 
 		 def coerce(other)
-		      [self, other]
+		      [self,Fraction.new(other,1)]
 		 end
 
 
