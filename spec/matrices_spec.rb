@@ -70,6 +70,15 @@ end
      (@m1+@md).should == @m3
     end
     
+     it "Resta de dos matrices (densa y dispersa)" do
+      @m3[0,0] = -1
+      @m3[0,1] = 2
+      @m3[1,0] = 3
+      @m3[1,1] = -1
+
+     (@m1-@md).should == @m3
+    end
+
     it "Resta de dos matrices" do
       @m3[0,0] = -1
       @m3[0,1] = -1
@@ -145,6 +154,15 @@ describe "#Matrices con fracciones" do
       (@mf1*@mdf).should == @mf3
     end
     
+    it "Resta de dos matrices (densa y dispersa)" do
+      @mf3[0,0] = Matrc::Fraction.new(1,4)
+      @mf3[0,1] = Matrc::Fraction.new(1,4)
+      @mf3[1,0] = Matrc::Fraction.new(1,20)
+      @mf3[1,1] = Matrc::Fraction.new(1,20)
+    
+      (@mf1-@mdf).should == @mf3
+    end
+
     it "Suma de dos matrices diferentes" do
       @mf4[0,0] = Matrc::Fraction.new(13, 4)
       @mf4[0,1] = Matrc::Fraction.new(13, 4)
@@ -154,7 +172,7 @@ describe "#Matrices con fracciones" do
       (@m+@mf1).should == @mf4
     end
     
-    it "* de dos matrices diferentes" do
+    it "Multiplicacion de dos matrices diferentes" do
       @mf4[0,0] = Matrc::Fraction.new(3, 2)
       @mf4[0,1] = Matrc::Fraction.new(3, 2)
       @mf4[1,0] = Matrc::Fraction.new(3, 2)

@@ -51,6 +51,10 @@ class TestMatrizDensa < Test::Unit::TestCase
    
   end
 
+  def tear_down
+    #nothing
+  end
+
    def test_simple
     @m3[0, 0] = 3
     @m3[0, 1] = 5
@@ -90,6 +94,63 @@ class TestMatrizDensa < Test::Unit::TestCase
      @mf3[1, 0] = Matrc::Fraction.new(1, 2)
      @mf3[1, 1] = Matrc::Fraction.new(1, 2)
      assert_not_equal(@mf3,@mf1*@mf2)
+   end
+
+  def test_type
+    assert_kind_of(MatEntero, @m1)
+    assert_kind_of(MatFraction, @mf2)
+  end
+     
+   
+end
+
+class MatEnterod < Matrc::MatrizDispersa
+  def zero
+    0
+  end
+end
+
+class MatFractiond < Matrc::MatrizDispersa
+  def zero
+    Matrc::Fraction.new(0, 1)
+  end
+end
+
+class TestMatrizDispersa < Test::Unit::TestCase
+
+  def setup
+     
+    @md = MatEnterod.new(2,2)
+    @mdf = MatFractiond.new(2,2)
+    @mdf1 = MatFractiond.new(2,2)
+   
+    @md[0, 0] = 2
+    @md[0, 1] = 0 
+    @md[1, 0] = 0     
+    @md[1, 1] = 5
+
+    @mdf[0, 0] = Matrc::Fraction.new(0, 1)
+    @mdf[0, 1] = Matrc::Fraction.new(0, 1)   
+    @mdf[1, 0] = Matrc::Fraction.new(0, 1)
+    @mdf[1, 1] = Matrc::Fraction.new(1, 5)
+
+  end
+
+   def test_simple
+    @mdf1[0, 0] = Matrc::Fraction.new(2, 1)
+    @mdf1[0, 1] = Matrc::Fraction.new(0, 1)
+    @mdf1[1, 0] = Matrc::Fraction.new(0, 1)
+    @mdf1[1, 1] = Matrc::Fraction.new(26, 5)		
+    assert_equal(@mdf1, @mdf+@md)
+
+   end
+
+   def test_failure
+     @mdf1[0, 0] = Matrc::Fraction.new(1, 2)
+     @mdf1[0, 1] = Matrc::Fraction.new(1, 2)
+     @mdf1[1, 0] = Matrc::Fraction.new(1, 2)
+     @mdf1[1, 1] = Matrc::Fraction.new(1, 2)
+     assert_not_equal(@mdf1, @mdf-@md)
    end
      
    
