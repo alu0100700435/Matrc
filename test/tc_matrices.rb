@@ -13,16 +13,19 @@ class MatFraction < Matrc::MatrizDensa
   end
 end
 
+
 class TestMatrizDensa < Test::Unit::TestCase
 
   def setup
-
+     
     @m1 = MatEntero.new(2, 2)
     @m2 = MatEntero.new(2, 2)
     @m3 = MatEntero.new(2, 2)
+   
     @mf1 = MatFraction.new(2,2)
     @mf2 = MatFraction.new(2,2)
     @mf3 = MatFraction.new(2,2)
+
 
     @m1[0, 0] = 1
     @m1[0, 1] = 2
@@ -33,16 +36,19 @@ class TestMatrizDensa < Test::Unit::TestCase
     @m2[0, 1] = 3
     @m2[1, 0] = 4
     @m2[1, 1] = 5
-    
-		@mf1[0, 0] = Matrc::Fraction.new(1, 4)
+
+        
+    @mf1[0, 0] = Matrc::Fraction.new(1, 4)
     @mf1[0, 1] = Matrc::Fraction.new(1, 4)
     @mf1[1, 0] = Matrc::Fraction.new(1, 4)
     @mf1[1, 1] = Matrc::Fraction.new(1, 4)
 
-		@mf2[0, 0] = Matrc::Fraction.new(1, 4)
+    @mf2[0, 0] = Matrc::Fraction.new(1, 4)
     @mf2[0, 1] = Matrc::Fraction.new(1, 4)
     @mf2[1, 0] = Matrc::Fraction.new(1, 4)
     @mf2[1, 1] = Matrc::Fraction.new(1, 4)
+
+   
   end
 
    def test_simple
@@ -64,7 +70,7 @@ class TestMatrizDensa < Test::Unit::TestCase
     @m3[1, 1] = 29	
     assert_equal(@m3, @m1*@m2)
 
-   	@mf3[0, 0] = Matrc::Fraction.new(1, 2)
+    @mf3[0, 0] = Matrc::Fraction.new(1, 2)
     @mf3[0, 1] = Matrc::Fraction.new(1, 2)
     @mf3[1, 0] = Matrc::Fraction.new(1, 2)
     @mf3[1, 1] = Matrc::Fraction.new(1, 2)
@@ -75,7 +81,8 @@ class TestMatrizDensa < Test::Unit::TestCase
     @mf3[1, 0] = Matrc::Fraction.new(1, 8)
     @mf3[1, 1] = Matrc::Fraction.new(1, 8)
     assert_equal(@mf3,@mf1*@mf2)
-   end
+    
+    end
 
    def test_failure
 		 @mf3[0, 0] = Matrc::Fraction.new(1, 2)
@@ -87,3 +94,5 @@ class TestMatrizDensa < Test::Unit::TestCase
      
    
 end
+
+
