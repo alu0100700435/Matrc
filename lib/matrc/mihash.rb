@@ -1,23 +1,22 @@
 class MiHash 
 
-  attr_accesor :row, :col
-  
-  def initilize(row,col)
-    @row, @col = row, col
-  end
-  
-  def eql?(other)
-    (@row == other.row) && (@col == other.col)
-  end
-  
-  def hash 
-    @row.hash ^ @col.hash
-  end
+		attr_accessor :r, :c
+		
+		def initialize(r,c)
+		  @r, @c = r, c
+		end
+		
+		def eql?(other)
+		  (@r == other.r) && (@c == other.c)
+		end
+		
+		def hash 
+		  @r.hash ^ @c.hash
+		end
 
-  def ==(other)
-   self.class === other and
-     other.col == @col and
-     other.row == @row
-  end
-
-end
+		def ==(other)
+		 self.class === other and
+		   other.c == @c and
+		   other.r == @r
+		end
+	end

@@ -4,17 +4,29 @@ describe Matrc::MatrizDensa do
    before :all do
 
      class MatEntero < Matrc::MatrizDensa
-      def zero
-        0
+       def zero
+         0
+       end
      end
-    end
 
      class MatFraction < Matrc::MatrizDensa
-      def zero
-        Matrc::Fraction.new(0, 1)
-    end
+       def zero
+          Matrc::Fraction.new(0, 1)
+       end
+     end
+     
+     class MatDispEntero < Matrc::MatrizDispersa
+       def zero
+       	 0
+       end
+     end
+     
+     class MatDispFraction < Matrc::MatrizDispersa
+       def zero
+          Matrc::Fraction.new(0, 1)
+       end
+     end
    end
-end
 
 describe "#Matrices de enteros" do
    before :all do
@@ -22,6 +34,7 @@ describe "#Matrices de enteros" do
     @m1 = MatEntero.new(2,2)
     @m2 = MatEntero.new(2,2)
     @m3 = MatEntero.new(2,2)
+    @md = MatDispEntero.new(2,2)
   
 
     @m1[0,0] = 1
@@ -33,6 +46,9 @@ describe "#Matrices de enteros" do
     @m2[0,1] = 3
     @m2[1,0] = 4
     @m2[1,1] = 5
+    
+    @md[0,0] = 2
+    @md[1,1] = 5
 
 end
  
@@ -44,7 +60,16 @@ end
 
      (@m1+@m2).should == @m3
     end
+    
+    it "Suma de dos matrices (densa y dispersa)" do
+     @m3[0,0] = 3
+     @m3[0,1] = 2
+     @m3[1,0] = 3
+     @m3[1,1] = 9
 
+     (@m1+@md).should == @m3
+    end
+    
     it "Resta de dos matrices" do
       @m3[0,0] = -1
       @m3[0,1] = -1
@@ -60,6 +85,14 @@ end
     it "Minimo de una matriz" do
        @m2.min.should == 2
     end
+    
+    it "Minimo de una matriz dispersa" do
+       @md.min.should == 0
+    end
+    
+    it "Maximo de una matriz dispersa" do
+       @md.max.should == 5
+    end
 
 
 end
@@ -71,6 +104,7 @@ describe "#Matrices con fracciones" do
     @mf2 = MatFraction.new(2,2)
     @mf3 = MatFraction.new(2,2)
     @mf4 = MatFraction.new(2,2)
+    @mdf = MatDispFraction.new(2,2)
     @m = MatEntero.new(2,2)
 
     @mf1[0,0] = Matrc::Fraction.new(1, 4)
@@ -87,7 +121,10 @@ describe "#Matrices con fracciones" do
     @m[0,1] = 3
     @m[1,0] = 3
     @m[1,1] = 3
- 
+    
+    @mdf[1,0] = Matrc::Fraction.new(1, 5)
+    @mdf[1,1] = Matrc::Fraction.new(1, 5)
+    
     end
 
     it "Multiplicacion de dos matrices" do
@@ -98,7 +135,16 @@ describe "#Matrices con fracciones" do
     
       (@mf1*@mf2).should == @mf3
     end
-
+    
+    it "Multiplicacion de dos matrices (densa y dispersa)" do
+      @mf3[0,0] = Matrc::Fraction.new(1,20)
+      @mf3[0,1] = Matrc::Fraction.new(1,20)
+      @mf3[1,0] = Matrc::Fraction.new(1,20)
+      @mf3[1,1] = Matrc::Fraction.new(1,20)
+    
+      (@mf1*@mdf).should == @mf3
+    end
+    
     it "Suma de dos matrices diferentes" do
       @mf4[0,0] = Matrc::Fraction.new(13, 4)
       @mf4[0,1] = Matrc::Fraction.new(13, 4)
@@ -115,6 +161,13 @@ describe "#Matrices con fracciones" do
       @mf4[1,1] = Matrc::Fraction.new(3, 2)
     
      (@m*@mf1).should == @mf4
+    end
+    
+    it "Maximo de una matriz de fracciones dispersas" do
+       @mdf.max.should == 0.2
+    end
+    it "Minimo de una matriz de fracciones dispersas" do
+       @mdf.min.should == 0
     end
 
     it "Maximo de una matriz de fracciones" do
