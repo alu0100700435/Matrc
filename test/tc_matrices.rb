@@ -3,13 +3,17 @@
 require "matrc"
 require "test/unit"
 
+#clase que herada de MatrizDensa
 class MatEntero < Matrc::MatrizDensa
+  #definicion del elemento nulo 
   def zero
     0
   end
 end
 
+#clase que herada de MatrizDensa
 class MatFraction < Matrc::MatrizDensa
+  #definicion del elemento nulo  
   def zero
     Matrc::Fraction.new(0, 1)
   end
@@ -17,7 +21,8 @@ end
 
 
 class TestMatrizDensa < Test::Unit::TestCase
-
+  
+  #metodo que creara los elementos de matrices densas, con los que se testeara
   def setup
      
     @m1 = MatEntero.new(2, 2)
@@ -56,7 +61,8 @@ class TestMatrizDensa < Test::Unit::TestCase
   def tear_down
     #nothing
   end
-
+   
+   #Metodo que contiene los diversos test simples (MatrizDensa)
    def test_simple
     @m3[0, 0] = 3
     @m3[0, 1] = 5
@@ -89,15 +95,17 @@ class TestMatrizDensa < Test::Unit::TestCase
     assert_equal(@mf3,@mf1*@mf2)
     
     end
-
+   
+   #metodo de los test de fallos(MatrizDensa)
    def test_failure
-		 @mf3[0, 0] = Matrc::Fraction.new(1, 2)
+     @mf3[0, 0] = Matrc::Fraction.new(1, 2)
      @mf3[0, 1] = Matrc::Fraction.new(1, 2)
      @mf3[1, 0] = Matrc::Fraction.new(1, 2)
      @mf3[1, 1] = Matrc::Fraction.new(1, 2)
      assert_not_equal(@mf3,@mf1*@mf2)
    end
 
+  #metodo de los test de tipo(MatrizDensa)
   def test_type
     assert_kind_of(MatEntero, @m1)
     assert_kind_of(MatFraction, @mf2)
@@ -106,20 +114,25 @@ class TestMatrizDensa < Test::Unit::TestCase
    
 end
 
+#clase que hereda de la MatrizDispersa
 class MatEnterod < Matrc::MatrizDispersa
+  #definicion del elemento nulo 
   def zero
     0
   end
 end
 
+#clase que hereda de la MatrizDispersa
 class MatFractiond < Matrc::MatrizDispersa
+  #definicion del elemento nulo 
   def zero
     Matrc::Fraction.new(0, 1)
   end
 end
 
 class TestMatrizDispersa < Test::Unit::TestCase
-
+  
+  #metodo que creara los elementos con matrices dispersas, con los que se testeara
   def setup
      
     @md = MatEnterod.new(2,2)
@@ -138,6 +151,7 @@ class TestMatrizDispersa < Test::Unit::TestCase
 
   end
 
+   #Metodo que contiene los diversos test simples(MatrizDispersa)
    def test_simple
     @mdf1[0, 0] = Matrc::Fraction.new(2, 1)
     @mdf1[0, 1] = Matrc::Fraction.new(0, 1)
@@ -146,7 +160,8 @@ class TestMatrizDispersa < Test::Unit::TestCase
     assert_equal(@mdf1, @mdf+@md)
 
    end
-
+   
+   #metodo de los test de fallos(MatrizDispersa)
    def test_failure
      @mdf1[0, 0] = Matrc::Fraction.new(1, 2)
      @mdf1[0, 1] = Matrc::Fraction.new(1, 2)

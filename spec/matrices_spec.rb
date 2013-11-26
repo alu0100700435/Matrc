@@ -5,31 +5,40 @@ require "matrc"
 describe Matrc::MatrizDensa do
    before :all do
 
+     #clase que hereda de MatrizDensa
      class MatEntero < Matrc::MatrizDensa
+       #definicion del elemento nulo
        def zero
          0
        end
      end
 
+     #clase que hereda de MatrizDensa
      class MatFraction < Matrc::MatrizDensa
+       #definicion del elemento nulo
        def zero
-          Matrc::Fraction.new(0, 1)
+         Matrc::Fraction.new(0, 1)
        end
      end
-     
+
+     #clase que hereda de MatrizDispersa
      class MatDispEntero < Matrc::MatrizDispersa
+       #definicion del elemento nulo
        def zero
        	 0
        end
      end
-     
+
+     #clase que hereda de MatrizDispersa
      class MatDispFraction < Matrc::MatrizDispersa
+       #definicion del elemento nulo
        def zero
-          Matrc::Fraction.new(0, 1)
+         Matrc::Fraction.new(0, 1)
        end
      end
    end
 
+#expectativas de matrices de enteros
 describe "#Matrices de enteros" do
    before :all do
 
@@ -108,6 +117,7 @@ end
 
 end
 
+#expectativas de matrices con fracciones
 describe "#Matrices con fracciones" do
    before :all do
 
