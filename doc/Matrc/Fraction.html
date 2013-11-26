@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>class Matrc::Fraction - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/matrc/fraction.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    <!-- Included Modules -->
+<nav id="includes-section" class="section">
+  <h3 class="section-header">Included Modules</h3>
+
+  <ul class="link-list">
+  
+  
+    <li><span class="include">Comparable</span>
+  
+  
+  </ul>
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-25">#%</a>
+    
+    <li ><a href="#method-i-2A">#*</a>
+    
+    <li ><a href="#method-i-2B">#+</a>
+    
+    <li ><a href="#method-i-2D">#-</a>
+    
+    <li ><a href="#method-i-2D-40">#-@</a>
+    
+    <li ><a href="#method-i-2F">#/</a>
+    
+    <li ><a href="#method-i-3C-3D-3E">#&lt;=&gt;</a>
+    
+    <li ><a href="#method-i-abs">#abs</a>
+    
+    <li ><a href="#method-i-coerce">#coerce</a>
+    
+    <li ><a href="#method-i-gcd">#gcd</a>
+    
+    <li ><a href="#method-i-reciprocal">#reciprocal</a>
+    
+    <li ><a href="#method-i-to_float">#to_float</a>
+    
+    <li ><a href="#method-i-to_string">#to_string</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="../LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../matrc_gemspec.html">matrc.gemspec</a>
+  
+    <li class="file"><a href="../spec/matrices_spec_rb~.html">matrices_spec.rb~</a>
+  
+    <li class="file"><a href="../test/tc_matrices_rb~.html">tc_matrices.rb~</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../MatDispEntero.html">MatDispEntero</a>
+  
+    <li><a href="../MatDispFraction.html">MatDispFraction</a>
+  
+    <li><a href="../MatEntero.html">MatEntero</a>
+  
+    <li><a href="../MatEnterod.html">MatEnterod</a>
+  
+    <li><a href="../MatFraction.html">MatFraction</a>
+  
+    <li><a href="../MatFractiond.html">MatFractiond</a>
+  
+    <li><a href="../Matrc.html">Matrc</a>
+  
+    <li><a href="../Matrc/Fraction.html">Matrc::Fraction</a>
+  
+    <li><a href="../Matrc/MatrizDensa.html">Matrc::MatrizDensa</a>
+  
+    <li><a href="../Matrc/MatrizDispersa.html">Matrc::MatrizDispersa</a>
+  
+    <li><a href="../Matriz.html">Matriz</a>
+  
+    <li><a href="../MiHash.html">MiHash</a>
+  
+    <li><a href="../TestMatrizDensa.html">TestMatrizDensa</a>
+  
+    <li><a href="../TestMatrizDispersa.html">TestMatrizDispersa</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Matrc::Fraction</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-den" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">den</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-num" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">num</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(num, den)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo de inicializacion de variables</p>
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">num</span>, <span class="ruby-identifier">den</span>)                
+  <span class="ruby-identifier">com</span> = <span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">num</span>, <span class="ruby-identifier">den</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">den</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>)
+    <span class="ruby-ivar">@num</span>, <span class="ruby-ivar">@den</span> = ((<span class="ruby-value">-1</span><span class="ruby-operator">*</span><span class="ruby-identifier">num</span>)<span class="ruby-operator">/</span><span class="ruby-identifier">com</span>), ((<span class="ruby-value">-1</span><span class="ruby-operator">*</span><span class="ruby-identifier">den</span>)<span class="ruby-operator">/</span><span class="ruby-identifier">com</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-ivar">@num</span>, <span class="ruby-ivar">@den</span> = <span class="ruby-identifier">num</span><span class="ruby-operator">/</span><span class="ruby-identifier">com</span>, <span class="ruby-identifier">den</span><span class="ruby-operator">/</span><span class="ruby-identifier">com</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-25" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">%</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que calcula el resto de la división de dos fracciones, o una
+fraccion con un nº natural</p>
+          
+          
+
+          
+          <div class="method-source-code" id="25-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 68</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">%</span>(<span class="ruby-identifier">other</span>)
+        <span class="ruby-comment">#comprueba que no es una fracción, y así convertir el nº natural a fraccion</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fraction</span>)
+          <span class="ruby-identifier">other</span> = <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">other</span>,<span class="ruby-value">1</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">a</span> = (<span class="ruby-ivar">@num</span><span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>)
+  <span class="ruby-identifier">b</span> = (<span class="ruby-ivar">@den</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>)
+  <span class="ruby-identifier">c</span> = <span class="ruby-identifier">a</span><span class="ruby-operator">%</span><span class="ruby-identifier">b</span>
+  <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 25-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 25-method -->
+
+    
+      <div id="method-i-2A" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">*</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que multiplica dos fracciones, o una fraccion con un nº natural</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2A-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">*</span>(<span class="ruby-identifier">other</span>)
+        <span class="ruby-comment">#comprueba que no es una fracción, y así convertir el nº natural a fraccion</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fraction</span>)
+        <span class="ruby-identifier">other</span> = <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">other</span>,<span class="ruby-value">1</span>)
+   <span class="ruby-keyword">end</span>
+   <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>, <span class="ruby-ivar">@den</span> <span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2A-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2A-method -->
+
+    
+      <div id="method-i-2B" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">+</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que suma dos fracciones, o una fraccion con un nº natural</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2B-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 32</span>
+          <span class="ruby-keyword">def</span> <span class="ruby-operator">+</span>(<span class="ruby-identifier">other</span>)
+<span class="ruby-comment">#comprueba que no es una fracción, y así convertir el nº natural a fraccion</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fraction</span>) 
+                    <span class="ruby-identifier">other</span> = <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">other</span>,<span class="ruby-value">1</span>)
+            <span class="ruby-keyword">end</span>
+                  <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span><span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span><span class="ruby-operator">*</span><span class="ruby-ivar">@den</span>, <span class="ruby-ivar">@den</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>)
+          <span class="ruby-keyword">end</span></pre>
+          </div><!-- 2B-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2B-method -->
+
+    
+      <div id="method-i-2D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que resta dos fracciones, o una fraccion con un nº natural</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 41</span>
+          <span class="ruby-keyword">def</span> <span class="ruby-operator">-</span>(<span class="ruby-identifier">other</span>)
+<span class="ruby-comment">#comprueba que no es una fracción, y así convertir el nº natural a fraccion</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fraction</span>)
+                    <span class="ruby-identifier">other</span> = <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">other</span>,<span class="ruby-value">1</span>)
+            <span class="ruby-keyword">end</span>
+            <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span><span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span><span class="ruby-operator">*</span><span class="ruby-ivar">@den</span>, <span class="ruby-ivar">@den</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>)
+          <span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-method -->
+
+    
+      <div id="method-i-2D-40" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">-@</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que devuelve el opuesto</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2D-40-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">-@</span>()
+  <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span> <span class="ruby-operator">*</span> <span class="ruby-value">-1</span>, <span class="ruby-ivar">@den</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 2D-40-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2D-40-method -->
+
+    
+      <div id="method-i-2F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">/</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que divide dos fracciones, o una fraccion con un nº natural</p>
+          
+          
+
+          
+          <div class="method-source-code" id="2F-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 59</span>
+          <span class="ruby-keyword">def</span> <span class="ruby-operator">/</span>(<span class="ruby-identifier">other</span>)
+<span class="ruby-comment">#comprueba que no es una fracción, y así convertir el nº natural a fraccion</span>
+            <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fraction</span>)
+                    <span class="ruby-identifier">other</span> = <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">other</span>,<span class="ruby-value">1</span>)
+             <span class="ruby-keyword">end</span>
+            <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">den</span>, <span class="ruby-ivar">@den</span> <span class="ruby-operator">*</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">num</span>)
+          <span class="ruby-keyword">end</span></pre>
+          </div><!-- 2F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 2F-method -->
+
+    
+      <div id="method-i-3C-3D-3E" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">&lt;=&gt;</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que compara dos fracciones, o una fraccion y un nº natural</p>
+          
+          
+
+          
+          <div class="method-source-code" id="3C-3D-3E-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 95</span>
+<span class="ruby-keyword">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Fraction</span>)
+          <span class="ruby-identifier">other</span> = <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">other</span>,<span class="ruby-value">1</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_float</span>() <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">to_float</span>()
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- 3C-3D-3E-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- 3C-3D-3E-method -->
+
+    
+      <div id="method-i-abs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">abs</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que devuelve el valor absoluto</p>
+          
+          
+
+          
+          <div class="method-source-code" id="abs-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 80</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">abs</span>()
+   <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@num</span>.<span class="ruby-identifier">abs</span>, <span class="ruby-ivar">@den</span>.<span class="ruby-identifier">abs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- abs-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- abs-method -->
+
+    
+      <div id="method-i-coerce" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">coerce</span><span
+            class="method-args">(other)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que permite la permutación de operandos</p>
+          
+          
+
+          
+          <div class="method-source-code" id="coerce-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">coerce</span>(<span class="ruby-identifier">other</span>)
+  [<span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">other</span>,<span class="ruby-value">1</span>),<span class="ruby-keyword">self</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- coerce-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- coerce-method -->
+
+    
+      <div id="method-i-gcd" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">gcd</span><span
+            class="method-args">(u, v)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que calcula el maximo comun divisor</p>
+          
+          
+
+          
+          <div class="method-source-code" id="gcd-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">gcd</span>(<span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span>)
+        <span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span> = <span class="ruby-identifier">u</span>.<span class="ruby-identifier">abs</span>, <span class="ruby-identifier">v</span>.<span class="ruby-identifier">abs</span>
+        <span class="ruby-keyword">while</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+                <span class="ruby-identifier">u</span>, <span class="ruby-identifier">v</span> = <span class="ruby-identifier">v</span>, <span class="ruby-identifier">u</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">v</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">u</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- gcd-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- gcd-method -->
+
+    
+      <div id="method-i-reciprocal" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">reciprocal</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que devuelve el reciproco</p>
+          
+          
+
+          
+          <div class="method-source-code" id="reciprocal-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 90</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">reciprocal</span>()
+  <span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@den</span>, <span class="ruby-ivar">@num</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- reciprocal-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- reciprocal-method -->
+
+    
+      <div id="method-i-to_float" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_float</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que muestra la fraccion en flotante</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_float-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_float</span>()
+  (<span class="ruby-ivar">@num</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-ivar">@den</span>.<span class="ruby-identifier">to_f</span>)    
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_float-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_float-method -->
+
+    
+      <div id="method-i-to_string" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_string</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>metodo que muestra la fraccion en string</p>
+          
+          
+
+          
+          <div class="method-source-code" id="to_string-source">
+            <pre><span class="ruby-comment"># File lib/matrc/fraction.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_string</span>()
+  <span class="ruby-node">&quot;#{@num}/#{@den}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_string-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_string-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>tc_matrices.rb~ - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Guardfile.html">Guardfile</a>
+  
+    <li class="file"><a href="../LICENSE_txt.html">LICENSE</a>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../matrc_gemspec.html">matrc.gemspec</a>
+  
+    <li class="file"><a href="../spec/matrices_spec_rb~.html">matrices_spec.rb~</a>
+  
+    <li class="file"><a href="../test/tc_matrices_rb~.html">tc_matrices.rb~</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../MatDispEntero.html">MatDispEntero</a>
+  
+    <li><a href="../MatDispFraction.html">MatDispFraction</a>
+  
+    <li><a href="../MatEntero.html">MatEntero</a>
+  
+    <li><a href="../MatEnterod.html">MatEnterod</a>
+  
+    <li><a href="../MatFraction.html">MatFraction</a>
+  
+    <li><a href="../MatFractiond.html">MatFractiond</a>
+  
+    <li><a href="../Matrc.html">Matrc</a>
+  
+    <li><a href="../Matrc/Fraction.html">Matrc::Fraction</a>
+  
+    <li><a href="../Matrc/MatrizDensa.html">Matrc::MatrizDensa</a>
+  
+    <li><a href="../Matrc/MatrizDispersa.html">Matrc::MatrizDispersa</a>
+  
+    <li><a href="../Matriz.html">Matriz</a>
+  
+    <li><a href="../MiHash.html">MiHash</a>
+  
+    <li><a href="../TestMatrizDensa.html">TestMatrizDensa</a>
+  
+    <li><a href="../TestMatrizDispersa.html">TestMatrizDispersa</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>fichero que contiene las pruebas unitarias</p>
+
+<p>require “matrc” require “test/unit”</p>
+
+<p>clase que herada de MatrizDensa class <a
+href="../MatEntero.html">MatEntero</a> &lt; <a
+href="../Matrc/MatrizDensa.html">Matrc::MatrizDensa</a></p>
+
+<pre class="ruby"><span class="ruby-comment">#definicion del elemento nulo </span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">zero</span>
+  <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>end</p>
+
+<p>clase que herada de MatrizDensa class <a
+href="../MatFraction.html">MatFraction</a> &lt; <a
+href="../Matrc/MatrizDensa.html">Matrc::MatrizDensa</a></p>
+
+<pre class="ruby"><span class="ruby-comment">#definicion del elemento nulo  </span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">zero</span>
+  <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">1</span>)
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>end</p>
+
+<p>class <a href="../TestMatrizDensa.html">TestMatrizDensa</a> &lt;
+Test::Unit::TestCase</p>
+
+<pre class="ruby"><span class="ruby-comment">#metodo que creara los elementos con los que se testeara</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+
+  <span class="ruby-ivar">@m1</span> = <span class="ruby-constant">MatEntero</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>, <span class="ruby-value">2</span>)
+  <span class="ruby-ivar">@m2</span> = <span class="ruby-constant">MatEntero</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>, <span class="ruby-value">2</span>)
+  <span class="ruby-ivar">@m3</span> = <span class="ruby-constant">MatEntero</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>, <span class="ruby-value">2</span>)
+
+  <span class="ruby-ivar">@mf1</span> = <span class="ruby-constant">MatFraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>,<span class="ruby-value">2</span>)
+  <span class="ruby-ivar">@mf2</span> = <span class="ruby-constant">MatFraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>,<span class="ruby-value">2</span>)
+  <span class="ruby-ivar">@mf3</span> = <span class="ruby-constant">MatFraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>,<span class="ruby-value">2</span>)
+
+  <span class="ruby-ivar">@m1</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-value">1</span>
+  <span class="ruby-ivar">@m1</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-value">2</span>
+  <span class="ruby-ivar">@m1</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-value">3</span>
+  <span class="ruby-ivar">@m1</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-value">4</span>
+
+  <span class="ruby-ivar">@m2</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-value">2</span>
+  <span class="ruby-ivar">@m2</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-value">3</span>
+  <span class="ruby-ivar">@m2</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-value">4</span>
+  <span class="ruby-ivar">@m2</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-value">5</span>
+
+  <span class="ruby-ivar">@mf1</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">4</span>)
+  <span class="ruby-ivar">@mf1</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">4</span>)
+  <span class="ruby-ivar">@mf1</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">4</span>)
+  <span class="ruby-ivar">@mf1</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">4</span>)
+
+  <span class="ruby-ivar">@mf2</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">4</span>)
+  <span class="ruby-ivar">@mf2</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">4</span>)
+  <span class="ruby-ivar">@mf2</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">4</span>)
+  <span class="ruby-ivar">@mf2</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">4</span>)
+
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">tear_down</span>
+  <span class="ruby-comment">#nothing</span>
+<span class="ruby-keyword">end</span>
+
+ <span class="ruby-comment">#Metodo que contiene los diversos test simples</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">test_simple</span>
+  <span class="ruby-ivar">@m3</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-value">3</span>
+  <span class="ruby-ivar">@m3</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-value">5</span>
+  <span class="ruby-ivar">@m3</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-value">7</span>
+  <span class="ruby-ivar">@m3</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-value">9</span>               
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@m3</span>, <span class="ruby-ivar">@m1</span><span class="ruby-operator">+</span><span class="ruby-ivar">@m2</span>)
+
+  <span class="ruby-ivar">@m3</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-value">-1</span>
+  <span class="ruby-ivar">@m3</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-value">-1</span>
+  <span class="ruby-ivar">@m3</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-value">-1</span>
+  <span class="ruby-ivar">@m3</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-value">-1</span>      
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@m3</span>, <span class="ruby-ivar">@m1</span><span class="ruby-operator">-</span><span class="ruby-ivar">@m2</span>)
+
+  <span class="ruby-ivar">@m3</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-value">10</span>
+  <span class="ruby-ivar">@m3</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-value">13</span>
+  <span class="ruby-ivar">@m3</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-value">22</span>
+  <span class="ruby-ivar">@m3</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-value">29</span>      
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@m3</span>, <span class="ruby-ivar">@m1</span><span class="ruby-operator">*</span><span class="ruby-ivar">@m2</span>)
+
+  <span class="ruby-ivar">@mf3</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)
+  <span class="ruby-ivar">@mf3</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)
+  <span class="ruby-ivar">@mf3</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)
+  <span class="ruby-ivar">@mf3</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@mf3</span>,<span class="ruby-ivar">@mf1</span><span class="ruby-operator">+</span><span class="ruby-ivar">@mf2</span>)
+
+  <span class="ruby-ivar">@mf3</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">8</span>)
+  <span class="ruby-ivar">@mf3</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">8</span>)
+  <span class="ruby-ivar">@mf3</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">8</span>)
+  <span class="ruby-ivar">@mf3</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">8</span>)
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@mf3</span>,<span class="ruby-ivar">@mf1</span><span class="ruby-operator">*</span><span class="ruby-ivar">@mf2</span>)
+
+  <span class="ruby-keyword">end</span>
+
+ <span class="ruby-comment">#metodo de los test de fallos</span>
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">test_failure</span>
+   <span class="ruby-ivar">@mf3</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)
+   <span class="ruby-ivar">@mf3</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)
+   <span class="ruby-ivar">@mf3</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)
+   <span class="ruby-ivar">@mf3</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)
+   <span class="ruby-identifier">assert_not_equal</span>(<span class="ruby-ivar">@mf3</span>,<span class="ruby-ivar">@mf1</span><span class="ruby-operator">*</span><span class="ruby-ivar">@mf2</span>)
+ <span class="ruby-keyword">end</span>
+
+<span class="ruby-comment">#metodo de los test de tipo</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_type</span>
+  <span class="ruby-identifier">assert_kind_of</span>(<span class="ruby-constant">MatEntero</span>, <span class="ruby-ivar">@m1</span>)
+  <span class="ruby-identifier">assert_kind_of</span>(<span class="ruby-constant">MatFraction</span>, <span class="ruby-ivar">@mf2</span>)
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>end</p>
+
+<p>class <a href="../MatEnterod.html">MatEnterod</a> &lt; <a
+href="../Matrc/MatrizDispersa.html">Matrc::MatrizDispersa</a></p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">zero</span>
+  <span class="ruby-value">0</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>end</p>
+
+<p>class <a href="../MatFractiond.html">MatFractiond</a> &lt; <a
+href="../Matrc/MatrizDispersa.html">Matrc::MatrizDispersa</a></p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">zero</span>
+  <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">1</span>)
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>end</p>
+
+<p>class <a href="../TestMatrizDispersa.html">TestMatrizDispersa</a> &lt;
+Test::Unit::TestCase</p>
+
+<pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+
+  <span class="ruby-ivar">@md</span> = <span class="ruby-constant">MatEnterod</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>,<span class="ruby-value">2</span>)
+  <span class="ruby-ivar">@mdf</span> = <span class="ruby-constant">MatFractiond</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>,<span class="ruby-value">2</span>)
+  <span class="ruby-ivar">@mdf1</span> = <span class="ruby-constant">MatFractiond</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>,<span class="ruby-value">2</span>)
+
+  <span class="ruby-ivar">@md</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-value">2</span>
+  <span class="ruby-ivar">@md</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-value">0</span> 
+  <span class="ruby-ivar">@md</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-value">0</span>     
+  <span class="ruby-ivar">@md</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-value">5</span>
+
+  <span class="ruby-ivar">@mdf</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">1</span>)
+  <span class="ruby-ivar">@mdf</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">1</span>)   
+  <span class="ruby-ivar">@mdf</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">1</span>)
+  <span class="ruby-ivar">@mdf</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">5</span>)
+
+<span class="ruby-keyword">end</span>
+
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">test_simple</span>
+  <span class="ruby-ivar">@mdf1</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2</span>, <span class="ruby-value">1</span>)
+  <span class="ruby-ivar">@mdf1</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">1</span>)
+  <span class="ruby-ivar">@mdf1</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">1</span>)
+  <span class="ruby-ivar">@mdf1</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">26</span>, <span class="ruby-value">5</span>)            
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-ivar">@mdf1</span>, <span class="ruby-ivar">@mdf</span><span class="ruby-operator">+</span><span class="ruby-ivar">@md</span>)
+
+ <span class="ruby-keyword">end</span>
+
+ <span class="ruby-keyword">def</span> <span class="ruby-identifier">test_failure</span>
+   <span class="ruby-ivar">@mdf1</span>[<span class="ruby-value">0</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)
+   <span class="ruby-ivar">@mdf1</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)
+   <span class="ruby-ivar">@mdf1</span>[<span class="ruby-value">1</span>, <span class="ruby-value">0</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)
+   <span class="ruby-ivar">@mdf1</span>[<span class="ruby-value">1</span>, <span class="ruby-value">1</span>] = <span class="ruby-constant">Matrc</span><span class="ruby-operator">::</span><span class="ruby-constant">Fraction</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>)
+   <span class="ruby-identifier">assert_not_equal</span>(<span class="ruby-ivar">@mdf1</span>, <span class="ruby-ivar">@mdf</span><span class="ruby-operator">-</span><span class="ruby-ivar">@md</span>)
+ <span class="ruby-keyword">end</span>
+</pre>
+
+<p>end</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
