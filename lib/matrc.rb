@@ -1,3 +1,5 @@
+#modulo Matrc, cuerpo de la gema Matrc
+
 require "matrc/version"
 
 require "matrc/matriz.rb"

@@ -1,3 +1,5 @@
+#fichero que contiene las pruebas TDD(Test development driven)
+
 require "matrc"
 
 describe Matrc::MatrizDensa do
