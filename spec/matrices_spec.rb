@@ -45,6 +45,7 @@ describe "#Matrices de enteros" do
     @m1 = MatEntero.new(2,2)
     @m2 = MatEntero.new(2,2)
     @m3 = MatEntero.new(2,2)
+    @mprueba = MatEntero.new(2,3)
     @md = MatDispEntero.new(2,2)
   
 
@@ -112,6 +113,17 @@ end
     
     it "Maximo de una matriz dispersa" do
        @md.max.should == 5
+    end
+
+    it "Encontrar un elemento que cumpla un bloque determinado" do
+       @mprueba[0,0] = 1
+       @mprueba[0,1] = 2
+       @mprueba[0,2] = 9
+       @mprueba[1,0] = 7
+       @mprueba[1,1] = 8
+       @mprueba[1,2] = 4
+       
+       (@mprueba.encontrar{|e| e*e > 6}).should eq([0,2])
     end
 
 

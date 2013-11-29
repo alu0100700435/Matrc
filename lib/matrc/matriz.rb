@@ -112,5 +112,15 @@ class Matriz
     end
     min
  end
+
+  def encontrar
+   row.times do |i|
+     col.times do |j|
+      if ( yield (self[i,j]))
+        return i,j
+       end
+    end
+   end
+  end
   
 end
