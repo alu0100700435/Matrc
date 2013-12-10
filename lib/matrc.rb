@@ -7,6 +7,7 @@ require "matrc/matriz_densa.rb"
 require "matrc/matriz_dispersa.rb"
 require "matrc/fraction.rb"
 require "matrc/mihash.rb"
+require "matrc/matriz_DSL.rb"
 
 module Matrc
 

@@ -1,3 +1,18 @@
 #!/usr/bin/env ruby
 
-require 'matrc'
+require "matrc"
+
+class MatrizEntero < Matrc::MatrizDensa
+  def zero
+    0
+  end
+end
+
+test = Matrc::MatrizDSL.new("Suma") do
+  tipo_matriz =  MatrizEntero 
+  opcion = consola
+  operando [[1, 2], [4, 5]]
+  operando [[9, 8], [6, 5]]
+end  
+  
+
