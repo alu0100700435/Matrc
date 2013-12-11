@@ -38,7 +38,7 @@ module Matrc
         
         
      def operando(matriz)
-      @op.push matrizcrear(matriz)      
+      @operandos.push matrizcrear(matriz)      
      end
 
      def opcion(opt)
