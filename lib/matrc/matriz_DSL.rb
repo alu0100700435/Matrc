@@ -58,5 +58,4 @@ module Matrc
       end
       elem
      end
-    end
-end
+  end
