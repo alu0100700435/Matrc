@@ -26,18 +26,25 @@ module Matrc
     end
      
      def calcular  
+       
+       resultado = "\n #{@operacion}"
+       resultado  << "\n #{'=' * @operacion.size}\n\n"
+ 
+      operandos.each_with_index do |op, index|
+      resultado << " #{index + 1}. #{op}\n" 
+      
       case @operation
-        when "Suma" 
-          return @operandos.reduce(:+)  
-        when "Resta" 
-          return @operandos.reduce(:-)  
-        when "Multiplicacion" 
-          return @operandos.reduce(:*)  
+        when "Suma" then resultado << " = #{(@operandos[0]+@operandos[1]).to_s}\n\n"
+        when "Resta" then resultado << " = #{(@operandos[0]-@operandos[1]).to_s}\n\n" 
+        when "Multiplicacion" then resultado << " = #{(@operandos[0]*@operandos[1]).to_s}\n\n"  
        end 
+       
+       resultado
+         
      end    
         
         
-     def operando(matriz)
+     def operandos(matriz)
       @operandos.push matrizcrear(matriz)      
      end
 
