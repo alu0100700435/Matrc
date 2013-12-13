@@ -62,7 +62,7 @@ describe "#Matrices de enteros" do
     @md[0,0] = 2
     @md[1,1] = 5
 
-end
+   end
  
    it "Suma de dos matrices" do
      @m3[0,0] = 3

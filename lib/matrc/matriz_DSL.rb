@@ -3,18 +3,17 @@ module Matrc
 
   class MatrizDSL 
 
-    attr_accessor :operation, :operandos, :mostrar, :tipo
+    attr_accessor :operation, :operandos, :mostrar, :tipo_matriz
     
     def initialize(operation, &block)
       @operation = operation
-      @operandos= []
-      @tipo = ""
+      @operandos = []
+      @tipo_matriz = ""
       @mostrar = ""
       
        
        instance_eval(&block)
-       
-       case mostrar
+     case mostrar
          when "fichero"
            then 
              File.open('mostrar.txt', 'mostrar') do |x|
@@ -23,20 +22,22 @@ module Matrc
          when "consola" then puts self 
          end
       end
+       
+   
     end
      
      def calcular  
        
-       resultado = "\n #{@operacion}"
-       resultado  << "\n #{'=' * @operacion.size}\n\n"
+       resultado = "\n #{@operation}"
+       resultado  << "\n #{'=' * @operation.size}\n\n"
  
-      operandos.each_with_index do |op, index|
-      resultado << " #{index + 1}. #{op}\n" 
+       operandos.each_with_index do |op, index|
+       resultado << " #{index + 1}. #{op}\n" 
       
-      case @operation
-        when "Suma" then resultado << " = #{(@operandos[0]+@operandos[1]).to_s}\n\n"
-        when "Resta" then resultado << " = #{(@operandos[0]-@operandos[1]).to_s}\n\n" 
-        when "Multiplicacion" then resultado << " = #{(@operandos[0]*@operandos[1]).to_s}\n\n"  
+       case @operation
+         when "Suma" then resultado << " = #{(@operandos[0]+@operandos[1]).to_s}\n\n"
+         when "Resta" then resultado << " = #{(@operandos[0]-@operandos[1]).to_s}\n\n" 
+         when "Multiplicacion" then resultado << " = #{(@operandos[0]*@operandos[1]).to_s}\n\n"  
        end 
        
        resultado
@@ -48,7 +49,7 @@ module Matrc
       @operandos.push matrizcrear(matriz)      
      end
 
-     def opcion(opt)
+     def mostrar(opt)
        @mostrar = opt
      end
      
@@ -66,3 +67,5 @@ module Matrc
       elem
      end
   end
+end
+
