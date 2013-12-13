@@ -22,7 +22,7 @@ describe "#Matrices de enteros" do
 		end
    end  
 
-   describe "# Representación correcta de la operacion (como cadena de caracteres): " do
+   describe "# Representación de la suma: " do
      it "Matrices densas" do
        @test.calcular.should eq("\n Suma\n ====\n\n 1. [[1,2],[4,5]]\n 2. [[9,8],[6,5]]\n = [[10,10],[10,10]]\n\n")
       
