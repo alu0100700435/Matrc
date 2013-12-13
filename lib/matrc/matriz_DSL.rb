@@ -12,7 +12,7 @@ module Matrc
       @mostrar = ""
       
        
-       instance_eval(&block)
+       instance_eval &block
      case mostrar
          when "fichero"
            then 
@@ -45,27 +45,25 @@ module Matrc
      end    
         
         
-     def operandos(matriz)
-      @operandos.push matrizcrear(matriz)      
-     end
-
-     def mostrar(opt)
-       @mostrar = opt
-     end
-     
-     def tipo_matriz(tipo)
-       @tipo = tipo
-     end
-        
-     def matrizcrear(elementos)
-       elem = @tipo.new(elementos.size, elementos[0].size)
+     def operandos(elementos)
+      elem = @tipo.new(elementos.size, elementos[0].size)
        elementos.each_with_index do |x, i|
         x.each_with_index do |y, j|
           elem[i, j] = y
         end
       end
-      elem
+      @operandos << elem
      end
+
+     def mostrar(mostrar)
+       @mostrar = mostrar
+     end
+     
+     def tipo_matriz(tipo_matriz)
+       @tipo_matriz = tipo_matriz
+     end
+        
+     
   end
 end
 
