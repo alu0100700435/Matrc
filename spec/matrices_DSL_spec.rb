@@ -16,7 +16,7 @@ describe "#Matrices de enteros" do
    before :all do
 		@test = Matrc::MatrizDSL.new("Suma") do
 			tipo_matriz =  MatEntero 
-			opcion = "consola"
+			mostrar = "consola"
 			operandos [[1, 2], [4, 5]]
 			operandos [[9, 8], [6, 5]]
 		end
