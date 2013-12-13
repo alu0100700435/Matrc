@@ -29,6 +29,27 @@ Para la colaboracion en la escritura del código hay que instalar las dependenci
 bundle
 
 
+## DSL 
+Para usar DSL, hay que definirlo de la siguiente forma:
+    
+    class MatrizEntero < Matrc::MatrizDensa
+      def zero
+        0
+      end
+    end
+    
+    test = Matrc::MatrizDSL.new("Suma") do
+      tipo_matriz = MatrizEntero
+      opcion = consola
+      operando [[1, 2], [4, 5]]
+      operando [[9, 8], [6, 5]]
+    end 
+    
+## Gemnasium
+
+https://gemnasium.com/alu0100700435/Matrc
+
+
 ## Contribuir
 
 1. Haz un fork
